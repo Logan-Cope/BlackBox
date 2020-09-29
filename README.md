@@ -7,10 +7,10 @@ In my version, the guessing player will start with 25 points.  As stated on the 
 
 ## Class Methods
 * An init method that takes as its parameter a list of (row, column) tuples for the locations of the atoms in the black box, and initializes any data members. 
-* A method named shoot_ray that takes as its parameters the row and column of the border square where the ray originates.  If the chosen row and column designate a corner square or a non-border square, it returns False.  Otherwise, shoot_ray returns a tuple of the row and column of the exit border square.  If there is no exit border square (because there was a hit), then shoot_ray returns None.  The guessing player's score is adjusted accordingly. 
-* A method named guess_atom that takes as parameters a row and column (in that order).  If there is an atom at that location, guess_atom should return True, otherwise it should return False.  The guessing player's score should be adjusted accordingly. 
-* A method named get_score that takes no parameters and returns the current score.
-* A method named atoms_left that takes no parameters and returns the number of atoms that haven't been guessed yet.
+* A shoot_ray method that takes as its parameters the row and column of the border square where the ray originates.  If the chosen row and column designate a corner square or a non-border square, it returns False.  Otherwise, shoot_ray returns a tuple of the row and column of the exit border square.  If there is no exit border square (because there was a hit), then shoot_ray returns None.  The guessing player's score is adjusted accordingly. 
+* A guess_atom method that takes as parameters a row and column. If there is an atom at that location, guess_atom returns True, otherwise it returns False. The guessing player's score is adjusted accordingly. 
+* A get_score method that takes no parameters and returns the current score.
+* A atoms_left method that takes no parameters and returns the number of atoms that haven't been guessed yet.
 
 Here's a very simple example of how the class could be used:
 ```
